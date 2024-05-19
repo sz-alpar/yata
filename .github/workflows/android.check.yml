@@ -21,7 +21,8 @@ jobs:
           cache: 'gradle'
 
       - name: run unit tests
-        run: cd android && ./gradlew app:test
+        working-directory: 'android'
+        run: ./gradlew app:test
 
       - name: archive unit test results
         if: always()
@@ -78,8 +79,9 @@ jobs:
           force-avd-creation: false
           emulator-options: -no-snapshot-save -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none
           disable-animations: true
+          working-directory: 'android'
           script: >
-            cd android && ./gradlew app:connectedAndroidTest
+            ./gradlew app:connectedAndroidTest
 
       - name: archive instrumented test results
         if: always()
@@ -101,7 +103,8 @@ jobs:
           cache: 'gradle'
 
       - name: run android lint
-        run: cd android && ./gradlew app:lint
+        working-directory: 'android'
+        run: ./gradlew app:lint
 
       - name: archive android lint report
         uses: actions/upload-artifact@v4
