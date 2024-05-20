@@ -5,5 +5,6 @@ import de.repeatuntil.yata.domain.todolist.TodoList
 
 data class User(
     val id: Id = Id(),
-    val todoList: TodoList = TodoList()
+    val todoListId: Id? = null,
+    val isActive: Boolean = false
 )

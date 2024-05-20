@@ -1,6 +1,9 @@
 package de.repeatuntil.yata.domain
 
 import de.repeatuntil.yata.domain.user.User
+import org.junit.Assert.assertFalse
+import org.junit.Assert.assertNull
+import org.junit.Assert.assertTrue
 import org.junit.Test
 
 class UserTests {
@@ -12,15 +15,24 @@ class UserTests {
         val user2 = User()
 
         // Then
-        assert(user1.id != user2.id)
+        assertTrue(user1.id != user2.id)
     }
 
     @Test
-    fun `new user has empty todo list`() {
+    fun `new user has no todo list`() {
         // Given
         val user = User()
 
         // Then
-        assert(user.todoList.todos.isEmpty())
+        assertNull(user.todoListId)
+    }
+
+    @Test
+    fun `new user is not active`() {
+        // Given
+        val user = User()
+
+        // Then
+        assertFalse(user.isActive)
     }
 }

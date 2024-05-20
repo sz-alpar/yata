@@ -1,6 +1,8 @@
 package de.repeatuntil.yata.domain
 
 import de.repeatuntil.yata.domain.todolist.TodoList
+import de.repeatuntil.yata.domain.user.User
+import org.junit.Assert
 import org.junit.Test
 
 class TodoListTests {
@@ -13,6 +15,15 @@ class TodoListTests {
 
         // Then
         assert(todoList1.id != todoList2.id)
+    }
+
+    @Test
+    fun `new to-do list has no user`() {
+        // Given
+        val todoList = TodoList()
+
+        // Then
+        Assert.assertNull(todoList.userId)
     }
 
     @Test

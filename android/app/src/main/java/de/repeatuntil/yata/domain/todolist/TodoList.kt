@@ -5,5 +5,6 @@ import de.repeatuntil.yata.domain.todolist.entities.Todo
 
 data class TodoList(
     val id: Id = Id(),
+    val userId: Id? = null,
     val todos: List<Todo> = emptyList()
 )
