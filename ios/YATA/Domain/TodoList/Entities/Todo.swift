@@ -13,12 +13,12 @@ struct Todo {
     let description: String
     let deadline: Deadline
     let isCompleted: Bool
-    
+
     var hasDeadline: Bool {
         deadline != Deadline.farFuture
     }
 
-    init(id: Id = Id(), 
+    init(id: Id = Id(),
          title: String = "",
          description: String = "",
          deadline: Deadline = Deadline.farFuture,

@@ -43,11 +43,11 @@ final class TodoTests: XCTestCase {
         XCTAssertEqual(todo.title, "")
         XCTAssertEqual(todo.description, "")
     }
-    
+
     func testNewTodoIsNotCompleted() throws {
         // Given
         let todo = Todo()
-        
+
         // Then
         XCTAssertFalse(todo.isCompleted)
     }
