@@ -13,8 +13,15 @@
 		4C2C8C1F2BFA79CE00A00306 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C2C8C1E2BFA79CE00A00306 /* Preview Assets.xcassets */; };
 		4C2C8C212BFA79CE00A00306 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2C8C202BFA79CE00A00306 /* Persistence.swift */; };
 		4C2C8C242BFA79CE00A00306 /* YATA.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4C2C8C222BFA79CE00A00306 /* YATA.xcdatamodeld */; };
-		4C2C8C2E2BFA79CE00A00306 /* YATATests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2C8C2D2BFA79CE00A00306 /* YATATests.swift */; };
-		4C2C8C382BFA79CE00A00306 /* YATAUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2C8C372BFA79CE00A00306 /* YATAUITests.swift */; };
+		4C2C8C482BFB742100A00306 /* TodoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2C8C472BFB742100A00306 /* TodoTests.swift */; };
+		4C2C8C4B2BFB74FB00A00306 /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2C8C4A2BFB74FB00A00306 /* Todo.swift */; };
+		4C2C8C4E2BFB752100A00306 /* Id.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2C8C4D2BFB752100A00306 /* Id.swift */; };
+		4C2C8C522BFB77CC00A00306 /* Deadline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2C8C512BFB77CC00A00306 /* Deadline.swift */; };
+		4C2C8C542BFB8B0900A00306 /* UserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2C8C532BFB8B0900A00306 /* UserTests.swift */; };
+		4C2C8C572BFB8B4100A00306 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2C8C562BFB8B4100A00306 /* User.swift */; };
+		4C2C8C592BFB8B7A00A00306 /* TodoList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2C8C582BFB8B7A00A00306 /* TodoList.swift */; };
+		4C2C8C5B2BFB8C4B00A00306 /* TodoListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2C8C5A2BFB8C4B00A00306 /* TodoListTests.swift */; };
+		4C2C8C622BFB8DEB00A00306 /* YATAUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2C8C602BFB8DEB00A00306 /* YATAUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,9 +50,16 @@
 		4C2C8C202BFA79CE00A00306 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		4C2C8C232BFA79CE00A00306 /* YATA.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = YATA.xcdatamodel; sourceTree = "<group>"; };
 		4C2C8C292BFA79CE00A00306 /* YATATests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YATATests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4C2C8C2D2BFA79CE00A00306 /* YATATests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YATATests.swift; sourceTree = "<group>"; };
 		4C2C8C332BFA79CE00A00306 /* YATAUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YATAUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4C2C8C372BFA79CE00A00306 /* YATAUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YATAUITests.swift; sourceTree = "<group>"; };
+		4C2C8C472BFB742100A00306 /* TodoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoTests.swift; sourceTree = "<group>"; };
+		4C2C8C4A2BFB74FB00A00306 /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
+		4C2C8C4D2BFB752100A00306 /* Id.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Id.swift; sourceTree = "<group>"; };
+		4C2C8C512BFB77CC00A00306 /* Deadline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deadline.swift; sourceTree = "<group>"; };
+		4C2C8C532BFB8B0900A00306 /* UserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTests.swift; sourceTree = "<group>"; };
+		4C2C8C562BFB8B4100A00306 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		4C2C8C582BFB8B7A00A00306 /* TodoList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoList.swift; sourceTree = "<group>"; };
+		4C2C8C5A2BFB8C4B00A00306 /* TodoListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListTests.swift; sourceTree = "<group>"; };
+		4C2C8C602BFB8DEB00A00306 /* YATAUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YATAUITests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,7 +92,7 @@
 			children = (
 				4C2C8C162BFA79CC00A00306 /* YATA */,
 				4C2C8C2C2BFA79CE00A00306 /* YATATests */,
-				4C2C8C362BFA79CE00A00306 /* YATAUITests */,
+				4C2C8C612BFB8DEB00A00306 /* YATAUITests */,
 				4C2C8C152BFA79CC00A00306 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -96,6 +110,7 @@
 		4C2C8C162BFA79CC00A00306 /* YATA */ = {
 			isa = PBXGroup;
 			children = (
+				4C2C8C462BFB73F000A00306 /* Domain */,
 				4C2C8C172BFA79CC00A00306 /* YATAApp.swift */,
 				4C2C8C192BFA79CC00A00306 /* ContentView.swift */,
 				4C2C8C1B2BFA79CE00A00306 /* Assets.xcassets */,
@@ -117,15 +132,69 @@
 		4C2C8C2C2BFA79CE00A00306 /* YATATests */ = {
 			isa = PBXGroup;
 			children = (
-				4C2C8C2D2BFA79CE00A00306 /* YATATests.swift */,
+				4C2C8C472BFB742100A00306 /* TodoTests.swift */,
+				4C2C8C532BFB8B0900A00306 /* UserTests.swift */,
+				4C2C8C5A2BFB8C4B00A00306 /* TodoListTests.swift */,
 			);
 			path = YATATests;
 			sourceTree = "<group>";
 		};
-		4C2C8C362BFA79CE00A00306 /* YATAUITests */ = {
+		4C2C8C462BFB73F000A00306 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
-				4C2C8C372BFA79CE00A00306 /* YATAUITests.swift */,
+				4C2C8C552BFB8B3800A00306 /* User */,
+				4C2C8C4F2BFB77AF00A00306 /* TodoList */,
+				4C2C8C4C2BFB751800A00306 /* Common */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		4C2C8C492BFB74EE00A00306 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				4C2C8C4A2BFB74FB00A00306 /* Todo.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		4C2C8C4C2BFB751800A00306 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				4C2C8C4D2BFB752100A00306 /* Id.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		4C2C8C4F2BFB77AF00A00306 /* TodoList */ = {
+			isa = PBXGroup;
+			children = (
+				4C2C8C502BFB77BE00A00306 /* ValueObjects */,
+				4C2C8C492BFB74EE00A00306 /* Entities */,
+				4C2C8C582BFB8B7A00A00306 /* TodoList.swift */,
+			);
+			path = TodoList;
+			sourceTree = "<group>";
+		};
+		4C2C8C502BFB77BE00A00306 /* ValueObjects */ = {
+			isa = PBXGroup;
+			children = (
+				4C2C8C512BFB77CC00A00306 /* Deadline.swift */,
+			);
+			path = ValueObjects;
+			sourceTree = "<group>";
+		};
+		4C2C8C552BFB8B3800A00306 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				4C2C8C562BFB8B4100A00306 /* User.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		4C2C8C612BFB8DEB00A00306 /* YATAUITests */ = {
+			isa = PBXGroup;
+			children = (
+				4C2C8C602BFB8DEB00A00306 /* YATAUITests.swift */,
 			);
 			path = YATAUITests;
 			sourceTree = "<group>";
@@ -205,6 +274,7 @@
 					};
 					4C2C8C322BFA79CE00A00306 = {
 						CreatedOnToolsVersion = 15.4;
+						LastSwiftMigration = 1540;
 						TestTargetID = 4C2C8C132BFA79CC00A00306;
 					};
 				};
@@ -260,10 +330,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C2C8C592BFB8B7A00A00306 /* TodoList.swift in Sources */,
 				4C2C8C242BFA79CE00A00306 /* YATA.xcdatamodeld in Sources */,
 				4C2C8C212BFA79CE00A00306 /* Persistence.swift in Sources */,
+				4C2C8C4E2BFB752100A00306 /* Id.swift in Sources */,
 				4C2C8C1A2BFA79CC00A00306 /* ContentView.swift in Sources */,
+				4C2C8C572BFB8B4100A00306 /* User.swift in Sources */,
 				4C2C8C182BFA79CC00A00306 /* YATAApp.swift in Sources */,
+				4C2C8C4B2BFB74FB00A00306 /* Todo.swift in Sources */,
+				4C2C8C522BFB77CC00A00306 /* Deadline.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,7 +346,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C2C8C2E2BFA79CE00A00306 /* YATATests.swift in Sources */,
+				4C2C8C542BFB8B0900A00306 /* UserTests.swift in Sources */,
+				4C2C8C482BFB742100A00306 /* TodoTests.swift in Sources */,
+				4C2C8C5B2BFB8C4B00A00306 /* TodoListTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,7 +356,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C2C8C382BFA79CE00A00306 /* YATAUITests.swift in Sources */,
+				4C2C8C622BFB8DEB00A00306 /* YATAUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -542,6 +619,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = NYNSNW3VZP;
@@ -555,6 +633,7 @@
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_TREAT_WARNINGS_AS_ERRORS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -566,6 +645,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = NYNSNW3VZP;

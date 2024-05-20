@@ -21,7 +21,12 @@ For _fastlane_ installation instructions, see [Installing _fastlane_](https://do
 [bundle exec] fastlane ios swift_lint
 ```
 
-Run SwiftLint
+Publish a swift package to our release repository.
+
+Parameters:
+  mode        - SwiftLint mode: :lint (default), :fix, :autocorrect or :analyze
+
+
 
 ----
 
