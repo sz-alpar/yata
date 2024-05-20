@@ -7,7 +7,8 @@ data class Todo(
     val id: Id = Id(),
     val title: String = "",
     val description: String = "",
-    val deadline: Deadline = Deadline.FAR_FUTURE
+    val deadline: Deadline = Deadline.FAR_FUTURE,
+    val isCompleted: Boolean = false
 ) {
 
     fun hasDeadline(): Boolean {

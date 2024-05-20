@@ -12,16 +12,22 @@ struct Todo {
     let title: String
     let description: String
     let deadline: Deadline
+    let isCompleted: Bool
+    
+    var hasDeadline: Bool {
+        deadline != Deadline.farFuture
+    }
 
-    init(id: Id = Id(), title: String = "", description: String = "", deadline: Deadline = Deadline.farFuture) {
+    init(id: Id = Id(), 
+         title: String = "",
+         description: String = "",
+         deadline: Deadline = Deadline.farFuture,
+         isCompleted: Bool = false) {
         self.id = id
         self.title = title
         self.description = description
         self.deadline = deadline
-    }
-
-    func hasDeadline() -> Bool {
-        return deadline != Deadline.farFuture
+        self.isCompleted = isCompleted
     }
 
     func removeDeadline() -> Todo {

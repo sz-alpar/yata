@@ -10,6 +10,7 @@ import kotlinx.datetime.minus
 import kotlinx.datetime.toInstant
 import kotlinx.datetime.toLocalDateTime
 import org.junit.Assert.assertEquals
+import org.junit.Assert.assertFalse
 import org.junit.Test
 
 class TodoTests {
@@ -41,6 +42,15 @@ class TodoTests {
         // Then
         assertEquals("", todo.title)
         assertEquals("", todo.description)
+    }
+
+    @Test
+    fun `new to-do is not completed`() {
+        // Given
+        val todo = Todo()
+
+        // Then
+        assertFalse(todo.isCompleted)
     }
 
     @Test

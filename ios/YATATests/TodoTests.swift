@@ -32,7 +32,7 @@ final class TodoTests: XCTestCase {
         let todo = Todo()
 
         // Then
-        XCTAssertFalse(todo.hasDeadline())
+        XCTAssertFalse(todo.hasDeadline)
     }
 
     func testNewTodoHasEmptyTitleAndDescription() throws {
@@ -43,17 +43,25 @@ final class TodoTests: XCTestCase {
         XCTAssertEqual(todo.title, "")
         XCTAssertEqual(todo.description, "")
     }
+    
+    func testNewTodoIsNotCompleted() throws {
+        // Given
+        let todo = Todo()
+        
+        // Then
+        XCTAssertFalse(todo.isCompleted)
+    }
 
     func testRemoveDeadline() throws {
         // Given
         let todo = Todo(deadline: Deadline.now())
 
         // When
-        XCTAssertTrue(todo.hasDeadline())
+        XCTAssertTrue(todo.hasDeadline)
         let todoWithoutDeadline = todo.removeDeadline()
 
         // Then
-        XCTAssertFalse(todoWithoutDeadline.hasDeadline())
+        XCTAssertFalse(todoWithoutDeadline.hasDeadline)
     }
 
     func testIsOverdueWhenDeadlineHasPassed() throws {
