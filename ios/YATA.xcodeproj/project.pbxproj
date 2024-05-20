@@ -15,7 +15,6 @@
 		4C2C8C242BFA79CE00A00306 /* YATA.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4C2C8C222BFA79CE00A00306 /* YATA.xcdatamodeld */; };
 		4C2C8C2E2BFA79CE00A00306 /* YATATests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2C8C2D2BFA79CE00A00306 /* YATATests.swift */; };
 		4C2C8C382BFA79CE00A00306 /* YATAUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2C8C372BFA79CE00A00306 /* YATAUITests.swift */; };
-		4C2C8C3A2BFA79CE00A00306 /* YATAUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2C8C392BFA79CE00A00306 /* YATAUITestsLaunchTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,7 +46,6 @@
 		4C2C8C2D2BFA79CE00A00306 /* YATATests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YATATests.swift; sourceTree = "<group>"; };
 		4C2C8C332BFA79CE00A00306 /* YATAUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YATAUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C2C8C372BFA79CE00A00306 /* YATAUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YATAUITests.swift; sourceTree = "<group>"; };
-		4C2C8C392BFA79CE00A00306 /* YATAUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YATAUITestsLaunchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,7 +126,6 @@
 			isa = PBXGroup;
 			children = (
 				4C2C8C372BFA79CE00A00306 /* YATAUITests.swift */,
-				4C2C8C392BFA79CE00A00306 /* YATAUITestsLaunchTests.swift */,
 			);
 			path = YATAUITests;
 			sourceTree = "<group>";
@@ -283,7 +280,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C2C8C382BFA79CE00A00306 /* YATAUITests.swift in Sources */,
-				4C2C8C3A2BFA79CE00A00306 /* YATAUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
