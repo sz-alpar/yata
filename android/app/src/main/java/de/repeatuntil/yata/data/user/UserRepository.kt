@@ -16,10 +16,11 @@ class UserRepository(
     private val _activeUserFlow: MutableSharedFlow<User?> = MutableSharedFlow()
     val activeUserFlow: Flow<User?> = _activeUserFlow.asSharedFlow()
 
-    suspend fun loadActiveUser() {
-        withContext(ioDispatcher) {
+    suspend fun getActiveUser(): User? {
+        return withContext(ioDispatcher) {
             val activeUser = dataSource.findActiveUser()
             _activeUserFlow.emit(activeUser)
+            return@withContext activeUser
         }
     }
 

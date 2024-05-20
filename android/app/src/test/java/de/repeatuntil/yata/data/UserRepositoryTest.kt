@@ -17,7 +17,24 @@ import org.junit.Test
 class UserRepositoryTest {
 
     @Test
-    fun `loads active user`() = runTest {
+    fun `gets active user`() = runTest {
+        // Given
+        val dataSource = InMemoryUserDataSource()
+        dataSource.addUser(User(id = Id("1"), isActive = false))
+        dataSource.addUser(User(id = Id("2"), isActive = false))
+        dataSource.addUser(User(id = Id("3"), isActive = true))
+
+        val userRepository = UserRepository(dataSource)
+
+        // When
+        val activeUser = userRepository.getActiveUser()
+
+        // Then
+        assertEquals(Id("3"), activeUser?.id)
+    }
+
+    @Test
+    fun `emits active user`() = runTest {
         // Given
         val dataSource = InMemoryUserDataSource()
         dataSource.addUser(User(id = Id("1"), isActive = false))
@@ -28,7 +45,7 @@ class UserRepositoryTest {
 
         userRepository.activeUserFlow.test {
             // When
-            userRepository.loadActiveUser()
+            userRepository.getActiveUser()
 
             // Then
             val activeUser = this.awaitItem()
