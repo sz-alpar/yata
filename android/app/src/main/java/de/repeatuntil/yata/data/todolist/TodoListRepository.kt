@@ -34,11 +34,11 @@ class TodoListRepository(
     }
 
     @Throws(IllegalArgumentException::class)
-    suspend fun updateTodoListForUser(todo: TodoList, user: User) {
+    suspend fun updateTodoListForUser(todoList: TodoList, user: User) {
         withContext(ioDispatcher) {
-            if (todo.userId == user.id) {
-                dataSource.updateTodoList(todo)
-                _currentTodoListFlow.emit(todo)
+            if (todoList.userId == user.id) {
+                dataSource.updateTodoList(todoList)
+                _currentTodoListFlow.emit(todoList)
             } else {
                 throw IllegalArgumentException("TodoList does not belong to user")
             }
