@@ -11,7 +11,7 @@ import Foundation
 struct Id: Equatable {
     let value: String
 
-    init(id: String = UUID().uuidString) {
+    init(_ id: String = UUID().uuidString) {
         self.value = id
     }
 
@@ -19,4 +19,11 @@ struct Id: Equatable {
         return lhs.value == rhs.value
     }
 
+}
+
+extension Id: Hashable {
+
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(value)
+    }
 }

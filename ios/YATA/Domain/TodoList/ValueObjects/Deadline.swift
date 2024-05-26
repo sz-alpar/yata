@@ -25,3 +25,11 @@ struct Deadline: Equatable {
         return Deadline(date: Date.now, timeZone: TimeZone.current)
     }
 }
+
+extension Deadline: Hashable {
+
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(date)
+        hasher.combine(timeZone)
+    }
+}

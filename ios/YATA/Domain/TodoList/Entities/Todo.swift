@@ -35,3 +35,25 @@ struct Todo {
     }
 
 }
+
+extension Todo: Equatable {
+
+    static func == (lhs: Todo, rhs: Todo) -> Bool {
+        return lhs.id == rhs.id &&
+        lhs.title == rhs.title &&
+        lhs.description == rhs.description &&
+        lhs.deadline == rhs.deadline &&
+        lhs.isCompleted == rhs.isCompleted
+    }
+}
+
+extension Todo: Hashable {
+
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+        hasher.combine(title)
+        hasher.combine(description)
+        hasher.combine(deadline)
+        hasher.combine(isCompleted)
+    }
+}

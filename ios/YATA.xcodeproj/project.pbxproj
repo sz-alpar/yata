@@ -22,6 +22,21 @@
 		4C2C8C592BFB8B7A00A00306 /* TodoList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2C8C582BFB8B7A00A00306 /* TodoList.swift */; };
 		4C2C8C5B2BFB8C4B00A00306 /* TodoListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2C8C5A2BFB8C4B00A00306 /* TodoListTests.swift */; };
 		4C2C8C622BFB8DEB00A00306 /* YATAUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2C8C602BFB8DEB00A00306 /* YATAUITests.swift */; };
+		4CC588FF2C0365C700C181D6 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC588FE2C0365C700C181D6 /* UserService.swift */; };
+		4CC589012C0365D600C181D6 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC589002C0365D600C181D6 /* UserRepository.swift */; };
+		4CC589032C0366FC00C181D6 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC589022C0366FC00C181D6 /* Errors.swift */; };
+		4CC589052C03676A00C181D6 /* ResultExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC589042C03676A00C181D6 /* ResultExtensions.swift */; };
+		4CC589072C0368B000C181D6 /* UserServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC589062C0368B000C181D6 /* UserServiceTests.swift */; };
+		4CC5890C2C036D9600C181D6 /* UserMemoryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC5890B2C036D9600C181D6 /* UserMemoryRepository.swift */; };
+		4CC5890E2C03BA7F00C181D6 /* TodoListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC5890D2C03BA7F00C181D6 /* TodoListService.swift */; };
+		4CC589102C03BA8A00C181D6 /* TodoListRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC5890F2C03BA8A00C181D6 /* TodoListRepository.swift */; };
+		4CC589142C03BB2200C181D6 /* TodoListServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC589132C03BB2200C181D6 /* TodoListServiceTests.swift */; };
+		4CC589172C03C9AD00C181D6 /* TodoListMemoryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC589162C03C9AD00C181D6 /* TodoListMemoryRepository.swift */; };
+		4CC5891C2C03CA7500C181D6 /* UserApplicationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC5891B2C03CA7500C181D6 /* UserApplicationService.swift */; };
+		4CC5891E2C03CDB300C181D6 /* TodoListApplicationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC5891D2C03CDB300C181D6 /* TodoListApplicationService.swift */; };
+		4CC589222C03D20100C181D6 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC589212C03D20100C181D6 /* ContentViewModel.swift */; };
+		4CC589252C03E0A200C181D6 /* UserServiceApplicationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC589242C03E0A200C181D6 /* UserServiceApplicationTests.swift */; };
+		4CC589272C03E0C700C181D6 /* TodoListServiceApplicationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC589262C03E0C700C181D6 /* TodoListServiceApplicationTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +75,21 @@
 		4C2C8C582BFB8B7A00A00306 /* TodoList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoList.swift; sourceTree = "<group>"; };
 		4C2C8C5A2BFB8C4B00A00306 /* TodoListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListTests.swift; sourceTree = "<group>"; };
 		4C2C8C602BFB8DEB00A00306 /* YATAUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YATAUITests.swift; sourceTree = "<group>"; };
+		4CC588FE2C0365C700C181D6 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		4CC589002C0365D600C181D6 /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
+		4CC589022C0366FC00C181D6 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
+		4CC589042C03676A00C181D6 /* ResultExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultExtensions.swift; sourceTree = "<group>"; };
+		4CC589062C0368B000C181D6 /* UserServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserServiceTests.swift; sourceTree = "<group>"; };
+		4CC5890B2C036D9600C181D6 /* UserMemoryRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserMemoryRepository.swift; sourceTree = "<group>"; };
+		4CC5890D2C03BA7F00C181D6 /* TodoListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListService.swift; sourceTree = "<group>"; };
+		4CC5890F2C03BA8A00C181D6 /* TodoListRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListRepository.swift; sourceTree = "<group>"; };
+		4CC589132C03BB2200C181D6 /* TodoListServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListServiceTests.swift; sourceTree = "<group>"; };
+		4CC589162C03C9AD00C181D6 /* TodoListMemoryRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListMemoryRepository.swift; sourceTree = "<group>"; };
+		4CC5891B2C03CA7500C181D6 /* UserApplicationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserApplicationService.swift; sourceTree = "<group>"; };
+		4CC5891D2C03CDB300C181D6 /* TodoListApplicationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListApplicationService.swift; sourceTree = "<group>"; };
+		4CC589212C03D20100C181D6 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
+		4CC589242C03E0A200C181D6 /* UserServiceApplicationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserServiceApplicationTests.swift; sourceTree = "<group>"; };
+		4CC589262C03E0C700C181D6 /* TodoListServiceApplicationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListServiceApplicationTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,12 +140,12 @@
 		4C2C8C162BFA79CC00A00306 /* YATA */ = {
 			isa = PBXGroup;
 			children = (
+				4CC5891F2C03D18B00C181D6 /* UI */,
+				4CC589182C03CA4B00C181D6 /* Application */,
+				4CC589092C036D7600C181D6 /* Infrastructure */,
 				4C2C8C462BFB73F000A00306 /* Domain */,
 				4C2C8C172BFA79CC00A00306 /* YATAApp.swift */,
-				4C2C8C192BFA79CC00A00306 /* ContentView.swift */,
 				4C2C8C1B2BFA79CE00A00306 /* Assets.xcassets */,
-				4C2C8C202BFA79CE00A00306 /* Persistence.swift */,
-				4C2C8C222BFA79CE00A00306 /* YATA.xcdatamodeld */,
 				4C2C8C1D2BFA79CE00A00306 /* Preview Content */,
 			);
 			path = YATA;
@@ -132,9 +162,8 @@
 		4C2C8C2C2BFA79CE00A00306 /* YATATests */ = {
 			isa = PBXGroup;
 			children = (
-				4C2C8C472BFB742100A00306 /* TodoTests.swift */,
-				4C2C8C532BFB8B0900A00306 /* UserTests.swift */,
-				4C2C8C5A2BFB8C4B00A00306 /* TodoListTests.swift */,
+				4CC589232C03E08D00C181D6 /* Application */,
+				4CC589082C03691B00C181D6 /* Domain */,
 			);
 			path = YATATests;
 			sourceTree = "<group>";
@@ -161,6 +190,8 @@
 			isa = PBXGroup;
 			children = (
 				4C2C8C4D2BFB752100A00306 /* Id.swift */,
+				4CC589022C0366FC00C181D6 /* Errors.swift */,
+				4CC589042C03676A00C181D6 /* ResultExtensions.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -171,6 +202,8 @@
 				4C2C8C502BFB77BE00A00306 /* ValueObjects */,
 				4C2C8C492BFB74EE00A00306 /* Entities */,
 				4C2C8C582BFB8B7A00A00306 /* TodoList.swift */,
+				4CC5890D2C03BA7F00C181D6 /* TodoListService.swift */,
+				4CC5890F2C03BA8A00C181D6 /* TodoListRepository.swift */,
 			);
 			path = TodoList;
 			sourceTree = "<group>";
@@ -187,6 +220,8 @@
 			isa = PBXGroup;
 			children = (
 				4C2C8C562BFB8B4100A00306 /* User.swift */,
+				4CC588FE2C0365C700C181D6 /* UserService.swift */,
+				4CC589002C0365D600C181D6 /* UserRepository.swift */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -197,6 +232,88 @@
 				4C2C8C602BFB8DEB00A00306 /* YATAUITests.swift */,
 			);
 			path = YATAUITests;
+			sourceTree = "<group>";
+		};
+		4CC589082C03691B00C181D6 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				4C2C8C472BFB742100A00306 /* TodoTests.swift */,
+				4C2C8C532BFB8B0900A00306 /* UserTests.swift */,
+				4C2C8C5A2BFB8C4B00A00306 /* TodoListTests.swift */,
+				4CC589062C0368B000C181D6 /* UserServiceTests.swift */,
+				4CC589132C03BB2200C181D6 /* TodoListServiceTests.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		4CC589092C036D7600C181D6 /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				4C2C8C202BFA79CE00A00306 /* Persistence.swift */,
+				4C2C8C222BFA79CE00A00306 /* YATA.xcdatamodeld */,
+				4CC589152C03C98F00C181D6 /* TodoList */,
+				4CC5890A2C036D8700C181D6 /* User */,
+			);
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
+		4CC5890A2C036D8700C181D6 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				4CC5890B2C036D9600C181D6 /* UserMemoryRepository.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		4CC589152C03C98F00C181D6 /* TodoList */ = {
+			isa = PBXGroup;
+			children = (
+				4CC589162C03C9AD00C181D6 /* TodoListMemoryRepository.swift */,
+			);
+			path = TodoList;
+			sourceTree = "<group>";
+		};
+		4CC589182C03CA4B00C181D6 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				4CC5891A2C03CA5E00C181D6 /* TodoList */,
+				4CC589192C03CA5600C181D6 /* User */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		4CC589192C03CA5600C181D6 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				4CC5891B2C03CA7500C181D6 /* UserApplicationService.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		4CC5891A2C03CA5E00C181D6 /* TodoList */ = {
+			isa = PBXGroup;
+			children = (
+				4CC5891D2C03CDB300C181D6 /* TodoListApplicationService.swift */,
+			);
+			path = TodoList;
+			sourceTree = "<group>";
+		};
+		4CC5891F2C03D18B00C181D6 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				4C2C8C192BFA79CC00A00306 /* ContentView.swift */,
+				4CC589212C03D20100C181D6 /* ContentViewModel.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		4CC589232C03E08D00C181D6 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				4CC589242C03E0A200C181D6 /* UserServiceApplicationTests.swift */,
+				4CC589262C03E0C700C181D6 /* TodoListServiceApplicationTests.swift */,
+			);
+			path = Application;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -330,15 +447,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CC589012C0365D600C181D6 /* UserRepository.swift in Sources */,
 				4C2C8C592BFB8B7A00A00306 /* TodoList.swift in Sources */,
+				4CC5891E2C03CDB300C181D6 /* TodoListApplicationService.swift in Sources */,
 				4C2C8C242BFA79CE00A00306 /* YATA.xcdatamodeld in Sources */,
+				4CC589222C03D20100C181D6 /* ContentViewModel.swift in Sources */,
 				4C2C8C212BFA79CE00A00306 /* Persistence.swift in Sources */,
+				4CC589032C0366FC00C181D6 /* Errors.swift in Sources */,
+				4CC589102C03BA8A00C181D6 /* TodoListRepository.swift in Sources */,
 				4C2C8C4E2BFB752100A00306 /* Id.swift in Sources */,
 				4C2C8C1A2BFA79CC00A00306 /* ContentView.swift in Sources */,
 				4C2C8C572BFB8B4100A00306 /* User.swift in Sources */,
+				4CC588FF2C0365C700C181D6 /* UserService.swift in Sources */,
 				4C2C8C182BFA79CC00A00306 /* YATAApp.swift in Sources */,
+				4CC5890E2C03BA7F00C181D6 /* TodoListService.swift in Sources */,
+				4CC589172C03C9AD00C181D6 /* TodoListMemoryRepository.swift in Sources */,
+				4CC5891C2C03CA7500C181D6 /* UserApplicationService.swift in Sources */,
+				4CC589052C03676A00C181D6 /* ResultExtensions.swift in Sources */,
 				4C2C8C4B2BFB74FB00A00306 /* Todo.swift in Sources */,
 				4C2C8C522BFB77CC00A00306 /* Deadline.swift in Sources */,
+				4CC5890C2C036D9600C181D6 /* UserMemoryRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,7 +474,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CC589272C03E0C700C181D6 /* TodoListServiceApplicationTests.swift in Sources */,
+				4CC589072C0368B000C181D6 /* UserServiceTests.swift in Sources */,
+				4CC589142C03BB2200C181D6 /* TodoListServiceTests.swift in Sources */,
 				4C2C8C542BFB8B0900A00306 /* UserTests.swift in Sources */,
+				4CC589252C03E0A200C181D6 /* UserServiceApplicationTests.swift in Sources */,
 				4C2C8C482BFB742100A00306 /* TodoTests.swift in Sources */,
 				4C2C8C5B2BFB8C4B00A00306 /* TodoListTests.swift in Sources */,
 			);
@@ -429,7 +561,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -488,7 +620,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -515,7 +647,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -549,7 +681,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -576,7 +708,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = NYNSNW3VZP;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = de.repeatuntil.yata.YATATests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -600,7 +732,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = NYNSNW3VZP;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = de.repeatuntil.yata.YATATests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -625,6 +757,7 @@
 				DEVELOPMENT_TEAM = NYNSNW3VZP;
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = de.repeatuntil.yata.YATAUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -651,6 +784,7 @@
 				DEVELOPMENT_TEAM = NYNSNW3VZP;
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = de.repeatuntil.yata.YATAUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";

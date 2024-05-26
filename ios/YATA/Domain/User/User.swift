@@ -9,10 +9,22 @@ import Foundation
 
 struct User {
     let id: Id
-    let todoList: TodoList
+    let todoListId: Id?
+    let isActive: Bool
 
-    init(id: Id = Id(), todoList: TodoList = TodoList()) {
+    init(id: Id = Id(),
+         todoListId: Id? = nil,
+         isActive: Bool = false) {
         self.id = id
-        self.todoList = todoList
+        self.todoListId = todoListId
+        self.isActive = isActive
+    }
+
+    func copy(id: Id? = nil,
+              todoListId: Id? = nil,
+              isActive: Bool? = nil) -> User {
+        return User(id: id ?? self.id,
+                    todoListId: todoListId ?? self.todoListId,
+                    isActive: isActive ?? self.isActive)
     }
 }
