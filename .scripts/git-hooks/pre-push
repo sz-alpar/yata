@@ -1,0 +1,33 @@
+#!/bin/bash
+set -o errexit  # abort on nonzero exitstatus
+set -o nounset  # abort on unbound variable
+set -o pipefail # don't hide errors within pipes
+#set -x          # enable debug output
+
+echo "***** Running pre-commit checks ******"
+
+if git diff --cached --name-only --diff-filter=ACM | grep -q "android"
+then
+  echo "Running Android checks"
+
+  cd android
+  ./gradlew app:test
+  cd -
+
+  echo "Done running Android checks"
+fi
+
+if git diff --cached --name-only --diff-filter=ACM | grep -q "ios"
+then
+  echo "Running iOS checks"
+
+  cd ios
+  xcodebuild clean test -scheme YATA -destination 'platform=iOS Simulator,OS=17.5,name=iPhone 15' CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO
+  cd -
+
+  echo "Done running iOS checks"
+fi
+
+echo "***** Done running pre-push checks ******"
+
+exit 0
