@@ -6,7 +6,7 @@ set -o pipefail # don't hide errors within pipes
 
 echo "***** Running pre-commit checks ******"
 
-if git diff --cached --name-only --diff-filter=ACM | grep -q "android"
+if git diff origin --cached --name-only --diff-filter=ACM | grep -q "android"
 then
   echo "Running Android checks"
 
@@ -17,7 +17,7 @@ then
   echo "Done running Android checks"
 fi
 
-if git diff --cached --name-only --diff-filter=ACM | grep -q "ios"
+if git diff origin --cached --name-only --diff-filter=ACM | grep -q "ios"
 then
   echo "Running iOS checks"
 
