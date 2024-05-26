@@ -1,0 +1,35 @@
+#!/bin/bash
+set -o errexit  # abort on nonzero exitstatus
+set -o nounset  # abort on unbound variable
+set -o pipefail # don't hide errors within pipes
+#set -x          # enable debug output
+
+echo "***** Running pre-commit checks ******"
+
+changed_files=$(git diff --cached --name-only --diff-filter=ACM)
+
+if $changed_files | grep -q "android"
+then
+  echo "Running Android checks"
+
+  cd android
+  ./gradlew app:lint
+  cd -
+
+  echo "Done running Android checks"
+fi
+
+if $changed_files | grep -q "ios"
+then
+  echo "Running iOS checks"
+
+  cd ios
+  bundle exec fastlane swift_lint
+  cd -
+
+  echo "Done running iOS checks"
+fi
+
+echo "***** Done running pre-commit checks ******"
+
+exit 0
