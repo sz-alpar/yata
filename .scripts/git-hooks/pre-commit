@@ -2,13 +2,11 @@
 set -o errexit  # abort on nonzero exitstatus
 set -o nounset  # abort on unbound variable
 set -o pipefail # don't hide errors within pipes
-#set -x          # enable debug output
+set -x          # enable debug output
 
 echo "***** Running pre-commit checks ******"
 
-changed_files=$(git diff --cached --name-only --diff-filter=ACM)
-
-if $changed_files | grep -q "android"
+if git diff --cached --name-only --diff-filter=ACM | grep -q "android"
 then
   echo "Running Android checks"
 
@@ -19,7 +17,7 @@ then
   echo "Done running Android checks"
 fi
 
-if $changed_files | grep -q "ios"
+if git diff --cached --name-only --diff-filter=ACM | grep -q "ios"
 then
   echo "Running iOS checks"
 
