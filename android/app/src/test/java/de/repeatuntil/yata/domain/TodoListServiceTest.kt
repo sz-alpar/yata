@@ -20,16 +20,13 @@ class TodoListServiceTest {
     @Test
     fun `loads to-do list for user`() = runTest {
         // Given
-        val userService = UserService(InMemoryUserRepository())
-        val user = User(id = Id("1"))
-        userService.addUser(user)
-
         val todoListService = TodoListService(InMemoryTodoListRepository())
-        val todoList = TodoList(userId = user.id)
+        val userId = Id("1")
+        val todoList = TodoList(userId = userId)
         todoListService.addTodoList(todoList)
 
         // When
-        val loadedTodoList = todoListService.loadTodoListForUser(user.id).getOrThrow()
+        val loadedTodoList = todoListService.loadTodoListForUser(userId).getOrThrow()
 
         // Then
         loadedTodoList.shouldNotBeNull()
@@ -39,14 +36,10 @@ class TodoListServiceTest {
     @Test
     fun `returns null to-do list, if user has no to-do list`() = runTest {
         // Given
-        val userService = UserService(InMemoryUserRepository())
-        val user = User(id = Id("1"))
-        userService.addUser(user)
-
         val todoListService = TodoListService(InMemoryTodoListRepository())
 
         // When
-        val todoList = todoListService.loadTodoListForUser(user.id).getOrThrow()
+        val todoList = todoListService.loadTodoListForUser(Id("1")).getOrThrow()
 
         // Then
         todoList.shouldBeNull()
@@ -55,22 +48,19 @@ class TodoListServiceTest {
     @Test
     fun `updates to-do list for user`() = runTest {
         // Given
-        val userService = UserService(InMemoryUserRepository())
-        val user = User(id = Id("1"))
-        userService.addUser(user)
-
         val todoListService = TodoListService(InMemoryTodoListRepository())
-        val todoList = TodoList(userId = user.id)
+        val userId = Id("1")
+        val todoList = TodoList(userId = userId)
         todoListService.addTodoList(todoList)
 
         // When
         val todo = Todo(id = Id("1"), description = "Do something")
         val updatedTodoList = todoList.copy(todos = mutableListOf(todo))
 
-        todoListService.updateTodoListForUser(updatedTodoList, user.id)
+        todoListService.updateTodoListForUser(updatedTodoList, userId)
 
         // Then
-        val loadedTodoList = todoListService.loadTodoListForUser(user.id).getOrThrow()
+        val loadedTodoList = todoListService.loadTodoListForUser(userId).getOrThrow()
 
         loadedTodoList.shouldNotBeNull()
             .shouldBeEqual(updatedTodoList)
@@ -79,23 +69,20 @@ class TodoListServiceTest {
     @Test
     fun `doesn't update to-do list for other user`() = runTest {
         // Given
-        val userService = UserService(InMemoryUserRepository())
-        val user1 = User(id = Id("1"))
-        userService.addUser(user1)
-        val user2 = User(id = Id("2"))
-        userService.addUser(user2)
+        val user1Id = Id("1")
+        val user2Id = Id("2")
 
         val todoListService = TodoListService(InMemoryTodoListRepository())
-        val todoList1 = TodoList(userId = user1.id)
+        val todoList1 = TodoList(userId = user1Id)
         todoListService.addTodoList(todoList1)
-        val todoList2 = TodoList(userId = user2.id)
+        val todoList2 = TodoList(userId = user2Id)
         todoListService.addTodoList(todoList2)
 
         // When
         val todo = Todo(id = Id("1"), description = "Do something")
         val updatedTodoList2 = todoList2.copy(todos = mutableListOf(todo))
 
-        val exception = todoListService.updateTodoListForUser(updatedTodoList2, user1.id).exceptionOrNull()
+        val exception = todoListService.updateTodoListForUser(updatedTodoList2, user1Id).exceptionOrNull()
 
         // Then
         exception.shouldBeTypeOf<TodoListServiceException.TodoListDoesNotBelongToUser>()
@@ -104,16 +91,14 @@ class TodoListServiceTest {
     @Test
     fun `returns 'to-do list does not exist for user' exception, if the user has no to-do list`() = runTest {
         // Given
-        val userService = UserService(InMemoryUserRepository())
-        val user = User(id = Id("1"), isActive = true)
-        userService.addUser(user)
+        val userId = Id("1")
 
         val todoListService = TodoListService(InMemoryTodoListRepository())
 
         // When
-        val todoList = TodoList(userId = user.id)
+        val todoList = TodoList(userId = userId)
 
-        val result = todoListService.updateTodoListForUser(todoList, user.id)
+        val result = todoListService.updateTodoListForUser(todoList, userId)
 
         // Then
         result.exceptionOrNull().shouldBeTypeOf<TodoListServiceException.TodoListDoesNotExistForUser>()

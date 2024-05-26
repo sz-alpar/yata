@@ -6,7 +6,7 @@ import io.kotest.matchers.equals.shouldNotBeEqual
 import io.kotest.matchers.nulls.shouldBeNull
 import org.junit.Test
 
-class UserTests {
+class UserTest {
 
     @Test
     fun `new user has a random unique id`() {

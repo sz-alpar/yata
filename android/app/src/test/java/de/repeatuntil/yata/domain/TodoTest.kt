@@ -15,7 +15,7 @@ import kotlinx.datetime.toInstant
 import kotlinx.datetime.toLocalDateTime
 import org.junit.Test
 
-class TodoTests {
+class TodoTest {
 
     @Test
     fun `new to-do has a random unique id`() {

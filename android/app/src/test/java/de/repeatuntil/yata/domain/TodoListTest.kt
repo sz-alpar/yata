@@ -6,7 +6,7 @@ import io.kotest.matchers.equals.shouldNotBeEqual
 import io.kotest.matchers.nulls.shouldBeNull
 import org.junit.Test
 
-class TodoListTests {
+class TodoListTest {
 
     @Test
     fun `new to-do list has a random unique id`() {
