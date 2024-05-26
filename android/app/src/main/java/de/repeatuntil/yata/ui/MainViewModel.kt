@@ -2,22 +2,25 @@ package de.repeatuntil.yata.ui
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import de.repeatuntil.yata.data.todolist.TodoListMemoryDataSource
-import de.repeatuntil.yata.data.todolist.TodoListRepository
-import de.repeatuntil.yata.data.user.UserMemoryDataSource
-import de.repeatuntil.yata.data.user.UserRepository
-import de.repeatuntil.yata.domain.common.Id
+import de.repeatuntil.yata.application.todolist.TodoListApplicationService
+import de.repeatuntil.yata.application.user.UserApplicationService
 import de.repeatuntil.yata.domain.todolist.TodoList
+import de.repeatuntil.yata.domain.todolist.TodoListService
 import de.repeatuntil.yata.domain.todolist.entities.Todo
-import de.repeatuntil.yata.domain.user.User
-import kotlinx.coroutines.delay
+import de.repeatuntil.yata.domain.user.UserService
+import de.repeatuntil.yata.infrastructure.todolist.TodoListMemoryRepository
+import de.repeatuntil.yata.infrastructure.user.UserMemoryRepository
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 
 class MainViewModel(
-    private val userRepository: UserRepository = UserRepository(UserMemoryDataSource()),
-    private val todoListRepository: TodoListRepository = TodoListRepository(TodoListMemoryDataSource(), userRepository)
+    private val userService: UserService = UserService(UserMemoryRepository()),
+    private val todoListApplicationService: TodoListApplicationService = TodoListApplicationService(
+        TodoListService(TodoListMemoryRepository()),
+        userService
+    ),
+    private val userApplicationService: UserApplicationService = UserApplicationService(userService)
 ) : ViewModel() {
 
     private val _uiState = MutableStateFlow<UIState>(UIState.Loading)
@@ -26,15 +29,13 @@ class MainViewModel(
     init {
         viewModelScope.launch {
             launch {
-                todoListRepository.currentTodoListFlow.collect { todoList ->
-                    if (todoList != null) {
-                        _uiState.value = UIState.ShowTodoList(todoList)
-                    }
+                runCatching {
+                    val activeUser = userApplicationService.loadOrCreateActiveUser().getOrThrow()
+                    val todoList = todoListApplicationService.loadOrCreateTodoListForActiveUser().getOrThrow()
+                    _uiState.value = UIState.ShowTodoList(todoList)
+                }.onFailure {
+                    _uiState.value = UIState.ShowError(it.message ?: "Unknown error")
                 }
-            }
-
-            userRepository.getActiveUser()?.let { activeUser ->
-                todoListRepository.loadTodoListForUser(activeUser)
             }
         }
     }
@@ -43,14 +44,16 @@ class MainViewModel(
         val updatedTodoList =
             todoList.copy(todos = todoList.todos + todo)
         viewModelScope.launch {
-            userRepository.getActiveUser()?.let { activeUser ->
-                try {
-                    todoListRepository.updateTodoListForUser(updatedTodoList, activeUser)
-                } catch (e: IllegalArgumentException) {
-                    _uiState.emit(UIState.ShowError("TodoList does not belong to user"))
+            runCatching {
+                todoListApplicationService.updateTodoListForActiveUser(updatedTodoList).getOrThrow()
+                val loadedTodoList = todoListApplicationService.loadTodoListForActiveUser().getOrThrow()
+                if (loadedTodoList != null) {
+                    _uiState.value = UIState.ShowTodoList(loadedTodoList)
+                } else {
+                    _uiState.value = UIState.ShowError("Failed to add to-do: to-do list not found")
                 }
-            } ?: run {
-                _uiState.emit(UIState.ShowError("No active user"))
+            }.onFailure {
+                _uiState.value = UIState.ShowError(it.message ?: "Unknown error")
             }
         }
     }

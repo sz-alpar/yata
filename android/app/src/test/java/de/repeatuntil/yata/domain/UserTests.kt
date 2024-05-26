@@ -1,9 +1,9 @@
 package de.repeatuntil.yata.domain
 
 import de.repeatuntil.yata.domain.user.User
-import org.junit.Assert.assertFalse
-import org.junit.Assert.assertNull
-import org.junit.Assert.assertTrue
+import io.kotest.matchers.booleans.shouldBeFalse
+import io.kotest.matchers.equals.shouldNotBeEqual
+import io.kotest.matchers.nulls.shouldBeNull
 import org.junit.Test
 
 class UserTests {
@@ -15,7 +15,7 @@ class UserTests {
         val user2 = User()
 
         // Then
-        assertTrue(user1.id != user2.id)
+        user1.id shouldNotBeEqual user2.id
     }
 
     @Test
@@ -24,7 +24,7 @@ class UserTests {
         val user = User()
 
         // Then
-        assertNull(user.todoListId)
+        user.todoListId.shouldBeNull()
     }
 
     @Test
@@ -33,6 +33,6 @@ class UserTests {
         val user = User()
 
         // Then
-        assertFalse(user.isActive)
+        user.isActive.shouldBeFalse()
     }
 }

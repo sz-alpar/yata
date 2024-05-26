@@ -1,8 +1,9 @@
 package de.repeatuntil.yata.domain
 
 import de.repeatuntil.yata.domain.todolist.TodoList
-import de.repeatuntil.yata.domain.user.User
-import org.junit.Assert
+import io.kotest.matchers.collections.shouldBeEmpty
+import io.kotest.matchers.equals.shouldNotBeEqual
+import io.kotest.matchers.nulls.shouldBeNull
 import org.junit.Test
 
 class TodoListTests {
@@ -14,7 +15,7 @@ class TodoListTests {
         val todoList2 = TodoList()
 
         // Then
-        assert(todoList1.id != todoList2.id)
+        todoList1.id shouldNotBeEqual todoList2.id
     }
 
     @Test
@@ -23,7 +24,7 @@ class TodoListTests {
         val todoList = TodoList()
 
         // Then
-        Assert.assertNull(todoList.userId)
+        todoList.userId.shouldBeNull()
     }
 
     @Test
@@ -32,6 +33,6 @@ class TodoListTests {
         val todoList = TodoList()
 
         // Then
-        assert(todoList.todos.isEmpty())
+        todoList.todos.shouldBeEmpty()
     }
 }

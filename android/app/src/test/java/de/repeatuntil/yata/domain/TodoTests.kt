@@ -2,6 +2,10 @@ package de.repeatuntil.yata.domain
 
 import de.repeatuntil.yata.domain.todolist.entities.Todo
 import de.repeatuntil.yata.domain.todolist.valueobjects.Deadline
+import io.kotest.matchers.booleans.shouldBeFalse
+import io.kotest.matchers.booleans.shouldBeTrue
+import io.kotest.matchers.equals.shouldNotBeEqual
+import io.kotest.matchers.string.shouldBeEmpty
 import kotlinx.datetime.Clock
 import kotlinx.datetime.DateTimeUnit
 import kotlinx.datetime.Instant
@@ -9,8 +13,6 @@ import kotlinx.datetime.TimeZone
 import kotlinx.datetime.minus
 import kotlinx.datetime.toInstant
 import kotlinx.datetime.toLocalDateTime
-import org.junit.Assert.assertEquals
-import org.junit.Assert.assertFalse
 import org.junit.Test
 
 class TodoTests {
@@ -22,7 +24,7 @@ class TodoTests {
         val todo2 = Todo()
 
         // Then
-        assert(todo1.id != todo2.id)
+        todo1.id shouldNotBeEqual todo2.id
     }
 
     @Test
@@ -31,7 +33,7 @@ class TodoTests {
         val todo = Todo()
 
         // Then
-        assert(!todo.hasDeadline())
+        todo.hasDeadline().shouldBeFalse()
     }
 
     @Test
@@ -40,8 +42,8 @@ class TodoTests {
         val todo = Todo()
 
         // Then
-        assertEquals("", todo.title)
-        assertEquals("", todo.description)
+        todo.title.shouldBeEmpty()
+        todo.description.shouldBeEmpty()
     }
 
     @Test
@@ -50,7 +52,7 @@ class TodoTests {
         val todo = Todo()
 
         // Then
-        assertFalse(todo.isCompleted)
+        todo.isCompleted.shouldBeFalse()
     }
 
     @Test
@@ -63,7 +65,7 @@ class TodoTests {
         val todoWithoutDeadline = todo.removeDeadline()
 
         // Then
-        assert(!todoWithoutDeadline.hasDeadline())
+        todoWithoutDeadline.hasDeadline().shouldBeFalse()
     }
 
     @Test
@@ -78,7 +80,7 @@ class TodoTests {
         val todo = Todo(deadline = Deadline(dateTimeYesterday, now.timeZone))
 
         // Then
-        assert(todo.deadline.isOverdue())
+        todo.deadline.isOverdue().shouldBeTrue()
     }
 
     @Test
@@ -94,7 +96,7 @@ class TodoTests {
         val todo = Todo(deadline = Deadline.now(clock))
 
         // Then
-        assert(todo.deadline.isOverdue())
+        todo.deadline.isOverdue().shouldBeTrue()
     }
 
     @Test
@@ -113,6 +115,6 @@ class TodoTests {
         val currentTimeZone = TimeZone.of("UTC+2")
 
         // Then
-        assert(todo.deadline.isOverdue(currentTimeZone))
+        todo.deadline.isOverdue(currentTimeZone).shouldBeTrue()
     }
 }
